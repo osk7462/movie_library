@@ -47,7 +47,6 @@ movies I have added in my collections>.”
 }
   
 ## POST http://localhost:8000/collection/
-
 Request payload:
 {
 “title”: “<Title of the collection>”,
@@ -61,12 +60,15 @@ Request payload:
 }, ...
 ]
 }
+
   
 Response payload:
 {
 “collection_uuid”: <uuid of the collection item>
 }
-PUT http://localhost:8000/collection/<collection_uuid>/
+  
+## PUT http://localhost:8000/collection/<collection_uuid>/
+
 This should update the movie list in the collection.
 Request:
 {
@@ -74,9 +76,7 @@ Request:
 “description”: <Optional updated description>,
 “movies”: <Optional movie list to be updated>,
 }
-  
 ## GET http://localhost:8000/collection/<collection_uuid>/
-
 Response:
 {
 “title”: <Title of the collection>,
